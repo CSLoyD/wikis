@@ -1,6 +1,6 @@
 {
-    "new_version": "1.4",
-    "package": "",
+    "new_version": "1.5",
+    "package": "https://github.com/CSLoyD/wikis/raw/refs/heads/master/shippi-1.5.zip",
     "tested": "6.6.3",
     "requires": "5.0.0",
     "changelog": "Bug fixes and performance improvements."
