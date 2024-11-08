@@ -25,33 +25,135 @@ API WooCommerce Plugin for Orders and Shipping Functionality
 
     [
         {
-            "id": 14,
-            "status": "pending",
-            "total": "1.00",
-            "billing": {
-                "first_name": "Test",
-                "last_name": "Test",
-                "company": "",
-                "address_1": "Miramonte St",
-                "address_2": "",
-                "city": "Cebu",
-                "state": "",
-                "postcode": "6000",
-                "country": "",
-                "email": "web2.loyd+test2@gmail.com",
-                "phone": ""
+            "delivery_details": {
+                "shipping_name": "Sample Test",
+                "shipping_address": {
+                    "first_name": "Sample",
+                    "last_name": "Test",
+                    "company": "",
+                    "address_1": "Mabolo Street",
+                    "address_2": "",
+                    "city": "Cebu City",
+                    "state": "CEB",
+                    "postcode": "6000",
+                    "country": "PH",
+                    "phone": "281271416187"
+                },
+                "notes": "",
+                "phone": "281271416187",
+                "email": "web2.loyd+test2@gmail.com"
             },
-            "pikpointng": {
-                "first_name": "Test",
-                "last_name": "test",
-                "company": "",
-                "address_1": "",
-                "address_2": "",
-                "city": "",
-                "state": "",
-                "postcode": "",
-                "country": "",
-                "phone": ""
+            "fulfillment_details": {
+                "id": 24,
+                "status": "processing",
+                "total": {
+                    "amount": "20",
+                    "currency": "ZAR"
+                },
+                "created": {
+                    "date": "2024-11-04 14:16:08.000000",
+                    "timezone_type": 1,
+                    "timezone": "+00:00"
+                }
+            }
+        },
+        {
+            "delivery_details": {
+                "shipping_name": "Sample Test",
+                "shipping_address": {
+                    "first_name": "Sample",
+                    "last_name": "Test",
+                    "company": "",
+                    "address_1": "Mabolo Street",
+                    "address_2": "",
+                    "city": "Cebu City",
+                    "state": "CEB",
+                    "postcode": "6000",
+                    "country": "PH",
+                    "phone": "812145116162"
+                },
+                "notes": "",
+                "phone": "812145116162",
+                "email": "web2.loyd+test2@gmail.com"
+            },
+            "fulfillment_details": {
+                "id": 23,
+                "status": "processing",
+                "total": {
+                    "amount": "20",
+                    "currency": "ZAR"
+                },
+                "created": {
+                    "date": "2024-11-04 13:30:52.000000",
+                    "timezone_type": 1,
+                    "timezone": "+00:00"
+                }
+            }
+        },
+        {
+            "delivery_details": {
+                "shipping_name": "Sample Test",
+                "shipping_address": {
+                    "first_name": "Sample",
+                    "last_name": "Test",
+                    "company": "",
+                    "address_1": "Miramonte St",
+                    "address_2": "",
+                    "city": "Cebu",
+                    "state": "CEB",
+                    "postcode": "6000",
+                    "country": "PH",
+                    "phone": "9091238123"
+                },
+                "notes": "",
+                "phone": "9091238123",
+                "email": "web2.loyd+test2@gmail.com"
+            },
+            "fulfillment_details": {
+                "id": 16,
+                "status": "processing",
+                "total": {
+                    "amount": "0",
+                    "currency": "PHP"
+                },
+                "created": {
+                    "date": "2024-10-27 12:29:51.000000",
+                    "timezone_type": 1,
+                    "timezone": "+00:00"
+                }
+            }
+        },
+        {
+            "delivery_details": {
+                "shipping_name": "Test Sample",
+                "shipping_address": {
+                    "first_name": "Test",
+                    "last_name": "Sample",
+                    "company": "Testing",
+                    "address_1": "Sample Address",
+                    "address_2": "",
+                    "city": "Cebu",
+                    "state": "",
+                    "postcode": "6000",
+                    "country": "PH",
+                    "phone": ""
+                },
+                "notes": "",
+                "phone": "123148148",
+                "email": "web2.loyd+test2@gmail.com"
+            },
+            "fulfillment_details": {
+                "id": 13,
+                "status": "processing",
+                "total": {
+                    "amount": "100",
+                    "currency": "PHP"
+                },
+                "created": {
+                    "date": "2024-10-27 09:01:36.000000",
+                    "timezone_type": 1,
+                    "timezone": "+00:00"
+                }
             }
         }
     ]
@@ -84,7 +186,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
             "city": "Los Angeles",
             "postcode": "90001"
         },
-        "pikpointng": {
+        "shipping": {
             "first_name": "Test",
             "last_name": "Testing",
             "address_1": "1234 Example St",
@@ -110,7 +212,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
         "message": "Order updated successfully."
     }
 
-## Add pikpointng Zone
+## Add Shipping Zone
 
 | Method   | Description                              |
 | -------- | ---------------------------------------- |
@@ -121,7 +223,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
 
 ### Request
 
-`/wp-json/pikpoint/v1/pikpointng/zone/add`
+`/wp-json/pikpoint/v1/shipping/zone/add`
 
 #### Example
 
@@ -143,11 +245,11 @@ API WooCommerce Plugin for Orders and Shipping Functionality
     Content-Length: 2
 
     {
-        "message": "pikpointng zone created successfully",
+        "message": "shipping zone created successfully",
         "zone_id: 2
     }
 
-## Add pikpointng Method
+## Add Shipping Method
 
 | Method   | Description                              |
 | -------- | ---------------------------------------- |
@@ -159,7 +261,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
 
 ### Request
 
-`/wp-json/pikpoint/v1/pikpointng/method/add`
+`/wp-json/pikpoint/v1/shipping/method/add`
 
 #### Example
 
@@ -179,6 +281,6 @@ API WooCommerce Plugin for Orders and Shipping Functionality
     Content-Length: 2
 
     {
-        "message": "pikpointng method added successfully",
-        "method_id: "free pikpointng"
+        "message": "shipping method added successfully",
+        "method_id: "free shipping"
     }
