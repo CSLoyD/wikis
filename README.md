@@ -1,4 +1,4 @@
-# SHIPPI API
+# PikPoint API
 
 API WooCommerce Plugin for Orders and Shipping Functionality
 
@@ -8,11 +8,11 @@ API WooCommerce Plugin for Orders and Shipping Functionality
 | Method   | Description                              |
 | -------- | ---------------------------------------- |
 |   GET    |                                          |
-| Headers  |          shippi-api-key                  |
+| Headers  |          pikpoint-api-key                |
 
 ### Request
 
-`/wp-json/shippi/v1/orders/`
+`/wp-json/pikpoint/v1/orders/`
 
 ### Response
 
@@ -41,7 +41,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
                 "email": "web2.loyd+test2@gmail.com",
                 "phone": ""
             },
-            "shipping": {
+            "pikpointng": {
                 "first_name": "Test",
                 "last_name": "test",
                 "company": "",
@@ -61,7 +61,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
 | Method   | Description                              |
 | -------- | ---------------------------------------- |
 |  POST    |                                          |
-| Headers  |        shippi-api-key (required)         |
+| Headers  |        pikpoint-api-key (required)       |
 |  POST    |           order_id (required)            |
 |  POST    |           status (required)              |
 |  POST    |        billing (array) (optional)        |
@@ -70,7 +70,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
 
 ### Request
 
-`/wp-json/shippi/v1/orders/update`
+`/wp-json/pikpoint/v1/orders/update`
 
 #### Example
 
@@ -84,7 +84,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
             "city": "Los Angeles",
             "postcode": "90001"
         },
-        "shipping": {
+        "pikpointng": {
             "first_name": "Test",
             "last_name": "Testing",
             "address_1": "1234 Example St",
@@ -110,18 +110,18 @@ API WooCommerce Plugin for Orders and Shipping Functionality
         "message": "Order updated successfully."
     }
 
-## Add Shipping Zone
+## Add pikpointng Zone
 
 | Method   | Description                              |
 | -------- | ---------------------------------------- |
 |  POST    |                                          |
-| Headers  |        shippi-api-key (required)         |
+| Headers  |        pikpoint-api-key (required)       |
 |  POST    |          zone_name (required)            |
 |  POST    |        regions (array) (required)        |
 
 ### Request
 
-`/wp-json/shippi/v1/shipping/zone/add`
+`/wp-json/pikpoint/v1/pikpointng/zone/add`
 
 #### Example
 
@@ -143,23 +143,23 @@ API WooCommerce Plugin for Orders and Shipping Functionality
     Content-Length: 2
 
     {
-        "message": "Shipping zone created successfully",
+        "message": "pikpointng zone created successfully",
         "zone_id: 2
     }
 
-## Add Shipping Method
+## Add pikpointng Method
 
 | Method   | Description                              |
 | -------- | ---------------------------------------- |
 |  POST    |                                          |
-| Headers  |        shippi-api-key (required)         |
+| Headers  |        pikpoint-api-key (required)       |
 |  POST    |          zone_id (required)              |
 |  POST    |         method_id (required)             |
 |  POST    |           cost (optional)                |
 
 ### Request
 
-`/wp-json/shippi/v1/shipping/method/add`
+`/wp-json/pikpoint/v1/pikpointng/method/add`
 
 #### Example
 
@@ -179,6 +179,6 @@ API WooCommerce Plugin for Orders and Shipping Functionality
     Content-Length: 2
 
     {
-        "message": "Shipping method added successfully",
-        "method_id: "free shipping"
+        "message": "pikpointng method added successfully",
+        "method_id: "free pikpointng"
     }
