@@ -12,7 +12,7 @@ API WooCommerce Plugin for Orders and Shipping Functionality
 
 ### Request
 
-`/wp-json/pikpoint/v1/orders/`
+`/wp-json/pikpoint/v1/orders`
 
 ### Response
 
